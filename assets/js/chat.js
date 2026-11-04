@@ -62,7 +62,7 @@
   // ---------- Safe, minimal Markdown: paragraphs, bullet lists, **bold** and links ----------
   const escapeHtml = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const link = (url, text) => {
-    const internal = url.startsWith(window.location.origin) || /poplar-dental-sparkhill\.netlify\.app|poplardentalsparkhill\.co\.uk/.test(url);
+    const internal = url.startsWith(window.location.origin) || /virush007\.github\.io\/poplar-dental-sparkhill|poplardentalsparkhill\.co\.uk/.test(url);
     return `<a href="${url}"${internal ? '' : ' target="_blank" rel="noopener"'}>${text}</a>`;
   };
   const inline = (s) => s

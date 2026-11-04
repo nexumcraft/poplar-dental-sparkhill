@@ -1,0 +1,8 @@
+# Used when Netlify builds the site from a Git repository.
+# For drag-and-drop deploys, run `node build.mjs` yourself and upload the site/ folder instead.
+[build]
+  command = "node build.mjs"
+  publish = "site"
+
+[build.environment]
+  NODE_VERSION = "20"

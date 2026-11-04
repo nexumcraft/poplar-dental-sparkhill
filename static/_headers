@@ -1,0 +1,11 @@
+# Netlify response headers for every page.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+
+# Read by the chat assistant; not a page for search engines.
+/knowledge-base.md
+  Content-Type: text/plain; charset=utf-8
+  X-Robots-Tag: noindex

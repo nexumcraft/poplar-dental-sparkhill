@@ -1,0 +1,12 @@
+{
+  "name": "poplar-dental-knowledge-base",
+  "private": true,
+  "description": "Builds the Poplar Dental Practice knowledge base as Word and PDF files",
+  "type": "module",
+  "scripts": {
+    "build": "node build-kb.mjs"
+  },
+  "dependencies": {
+    "docx": "9.5.1"
+  }
+}

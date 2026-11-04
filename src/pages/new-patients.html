@@ -1,0 +1,114 @@
+<!-- {"title": "Register as a New NHS Patient | Poplar Dental Practice, Sparkhill", "description": "Poplar Dental Practice in Sparkhill, Birmingham is accepting new NHS patients: adults and children. Register online or call 0121 771 3720.", "nav": "new-patients"} -->
+<section class="page-hero">
+  <div class="container page-hero__grid">
+    <div>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span aria-current="page">New patients</span></nav>
+    <h1>Register as a new patient</h1>
+    <p>We're accepting new NHS patients for routine dental care. Here's who can join, how registering works, and what happens at your first visit.</p>
+    </div>
+    <div class="photo-frame page-hero__photo"><img src="assets/img/photos/p-new-patients-lg.webp" srcset="assets/img/photos/p-new-patients.webp 640w, assets/img/photos/p-new-patients-lg.webp 1200w" sizes="(min-width: 900px) 42vw, 100vw" width="1200" height="900" alt="A father and son brushing their teeth together" decoding="async"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container layout-aside">
+    <div class="prose">
+      <h2>Who we're accepting</h2>
+      <ul class="check-list">
+        <li>Adults aged 18 and over</li>
+        <li>Adults who are entitled to free NHS dental care</li>
+        <li>Children and young people under 18</li>
+      </ul>
+      <p>This is what the practice last confirmed on NHS.uk, in September 2026. Places can change, so we'll confirm yours when you get in touch.</p>
+
+      <h2>How registering works</h2>
+      <ol class="numbered">
+        <li><div><h3>Send your details, or call</h3><p>Use the short form below, or call 0121 771 3720 during opening hours. We only need your name and a phone number.</p></div></li>
+        <li><div><h3>We check we can take you</h3><p>We confirm we have an NHS place for you. If we can't take you right now, we'll tell you, and you can <a href="https://www.nhs.uk/service-search/find-a-dentist">find another NHS dentist on NHS.uk</a>.</p></div></li>
+        <li><div><h3>We book your first check-up</h3><p>We call you back to arrange your first appointment.</p></div></li>
+      </ol>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#register">Send your details</a>
+        <a class="btn btn--outline" href="tel:+441217713720"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call 0121 771 3720</a>
+      </div>
+
+      <h2>What to bring to your first visit</h2>
+      <ul>
+        <li>A list of any medicines you take</li>
+        <li>Proof if you get free NHS dental care, such as a maternity exemption certificate, an HC2 certificate or a benefit letter</li>
+        <li>Your previous dentist's details, if you have them</li>
+        <li>For children, a parent or guardian should come along</li>
+      </ul>
+
+      <h2>Your first check-up</h2>
+      <p>We'll go through your medical history, examine your teeth, gums and mouth, and take X-rays if they're needed. If you need any treatment, we'll explain your options and the NHS charge before we start. For Band 2 or Band 3 treatment, you'll get a written treatment plan.</p>
+    </div>
+
+    <aside class="aside-card" aria-labelledby="call-title">
+      <h2 id="call-title">Prefer to talk to us?</h2>
+      <p>Call and we can register you over the phone.</p>
+      <a class="btn btn--call btn--block" href="tel:+441217713720"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call 0121 771 3720</a>
+      {{> hours}}
+    </aside>
+  </div>
+</section>
+
+<section class="section section--paper" id="register" aria-labelledby="register-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Register online</p>
+      <h2 id="register-title">Send us your details</h2>
+      <p>We only need enough to call you back. We'll go through everything else, including your medical history, in person.</p>
+    </div>
+    <div class="form-card">
+      <!-- Sent to the n8n workflow "Poplar Dental registration form", which saves it to Google Sheets. -->
+      <form class="form" name="register" method="POST" action="https://n8n-a8un.srv2065226.hstgr.cloud/webhook/poplar-dental-register" data-register-form novalidate>
+        <p class="visually-hidden" aria-hidden="true"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required data-error="Enter the patient's full name">
+          </div>
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required data-error="Enter a phone number we can call, including the area code">
+          </div>
+          <div class="field">
+            <label for="email">Email <span class="optional">(optional)</span></label>
+            <input id="email" name="email" type="email" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="best_time">Best time to call <span class="optional">(optional)</span></label>
+            <select id="best_time" name="best_time">
+              <option value="Any time">Any time</option>
+              <option value="Morning">Morning (9am to 1pm)</option>
+              <option value="Afternoon">Afternoon (2pm to 5:30pm)</option>
+            </select>
+          </div>
+        </div>
+
+        <fieldset class="field">
+          <legend>Who is registering?</legend>
+          <div class="choice-row">
+            <label class="choice"><input type="radio" name="patient_type" value="Adult (18 or over)" required data-error="Choose who is registering">Adult (18 or over)</label>
+            <label class="choice"><input type="radio" name="patient_type" value="Child (under 18)">Child (under 18)</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="message">Anything else we should know? <span class="optional">(optional)</span></label>
+          <textarea id="message" name="message" rows="3"></textarea>
+          <p class="hint">For example, if other family members would like to register too. Please don't include any medical information.</p>
+        </div>
+
+        <div class="field">
+          <label class="consent"><input type="checkbox" name="consent" value="yes" required data-error="Tick this box so we can contact you"><span>I'm happy for Poplar Dental Practice to contact me about registering.</span></label>
+        </div>
+
+        <div data-form-status role="status" aria-live="polite" hidden></div>
+        <div><button class="btn btn--primary" type="submit">Send my details</button></div>
+      </form>
+    </div>
+    <p class="small-print">Your details are sent securely to our appointment system and passed to the practice team. We use them only to contact you about registering. <a href="patient-info.html#privacy">Read our privacy notice</a>.</p>
+  </div>
+</section>

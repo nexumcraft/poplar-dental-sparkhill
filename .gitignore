@@ -1,0 +1,6 @@
+# Built output; recreated by `node build.mjs`
+site/
+node_modules/
+
+# Local Netlify folder
+.netlify

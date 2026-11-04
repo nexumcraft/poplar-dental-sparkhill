@@ -1,0 +1,32 @@
+<!-- {"title": "NHS Dental Treatments in Sparkhill, Birmingham | Poplar Dental Practice", "description": "Check-ups, fillings, crowns, bridges, gum treatment, root canal, extractions and braces on the NHS at Poplar Dental Practice, Sparkhill. Call 0121 771 3720.", "nav": "treatments"} -->
+<section class="page-hero">
+  <div class="container page-hero__grid">
+    <div>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span aria-current="page">Treatments</span></nav>
+    <h1>Treatments</h1>
+    <p>We provide the NHS dental care most families need. Here's what we offer, and how NHS charges work.</p>
+    </div>
+    <div class="photo-frame page-hero__photo"><img src="assets/img/photos/p-treatments-lg.webp" srcset="assets/img/photos/p-treatments.webp 640w, assets/img/photos/p-treatments-lg.webp 1200w" sizes="(min-width: 900px) 42vw, 92vw" width="1200" height="800" alt="" decoding="async"></div>
+  </div>
+</section>
+
+<section class="section section--paper" aria-labelledby="list-title">
+  <div class="container">
+    <h2 class="visually-hidden" id="list-title">Our treatments</h2>
+    {{> treatment-list}}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="charges-title">
+  <div class="container prose">
+    <p class="eyebrow">Costs</p>
+    <h2 id="charges-title">How NHS charges work</h2>
+    <p>NHS dental treatment is grouped into bands. We'll always tell you which band your treatment falls into, and what it will cost, before we start.</p>
+    {{> nhs-bands}}
+    <div class="callout">
+      <p><strong>Many people get NHS dental care for free.</strong> That includes children under 18, people under 19 in full-time education, and anyone pregnant or who has had a baby in the last 12 months. <a href="patient-info.html#free-care">See who qualifies</a>.</p>
+    </div>
+  </div>
+</section>
+
+{{> cta-band}}

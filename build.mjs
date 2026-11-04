@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 
 // The live address, with no trailing slash. Used for canonical links, sitemap.xml and robots.txt.
 // Leave empty ('') to build without them.
-const SITE_URL = 'https://virush007.github.io/poplar-dental-sparkhill';
+const SITE_URL = 'https://nexumcraft.github.io/poplar-dental-sparkhill';
 // The folder the site is served from. Use '' once a custom domain points at it.
 const BASE_PATH = '/poplar-dental-sparkhill';
 

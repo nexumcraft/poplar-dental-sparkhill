@@ -2,7 +2,7 @@
 
 **Version:** 27 October 2026
 
-**Sources:** the Poplar Dental Practice website ([virush007.github.io/poplar-dental-sparkhill](https://virush007.github.io/poplar-dental-sparkhill)), the practice's NHS.uk listing (last confirmed by the practice on 18 September 2026), and its Care Quality Commission (CQC) profile.
+**Sources:** the Poplar Dental Practice website ([nexumcraft.github.io/poplar-dental-sparkhill](https://nexumcraft.github.io/poplar-dental-sparkhill)), the practice's NHS.uk listing (last confirmed by the practice on 18 September 2026), and its Care Quality Commission (CQC) profile.
 
 **Purpose:** this document holds everything the practice's website says, organised by topic, so an assistant can answer patients' questions accurately. Each section stands on its own.
 
@@ -32,7 +32,7 @@ These rules are for an assistant that answers patients' questions using this doc
 | Team | Two dentists, three dental nurses and a practice manager |
 | Regulator | Care Quality Commission (CQC), location ID 1-198193249 |
 | Email | Not published. Contact the practice by phone or through the online registration form. |
-| Website | [virush007.github.io/poplar-dental-sparkhill](https://virush007.github.io/poplar-dental-sparkhill) |
+| Website | [nexumcraft.github.io/poplar-dental-sparkhill](https://nexumcraft.github.io/poplar-dental-sparkhill) |
 | NHS.uk profile | [nhs.uk/services/dentist/poplar-dental-practice/V004866](https://www.nhs.uk/services/dentist/poplar-dental-practice/V004866) |
 | CQC profile | [cqc.org.uk/location/1-198193249](https://www.cqc.org.uk/location/1-198193249) |
 
@@ -84,7 +84,7 @@ People can also register over the phone by calling 0121 771 3720.
 
 ### The online registration form
 
-The form is on the New patients page: [virush007.github.io/poplar-dental-sparkhill/new-patients.html#register](https://virush007.github.io/poplar-dental-sparkhill/new-patients.html#register).
+The form is on the New patients page: [nexumcraft.github.io/poplar-dental-sparkhill/new-patients.html#register](https://nexumcraft.github.io/poplar-dental-sparkhill/new-patients.html#register).
 
 It asks for:
 
@@ -117,7 +117,7 @@ Poplar Dental Practice provides NHS dental care for adults and children. Its NHS
 
 ### Check-ups and cleaning
 
-**NHS charge band:** Band 1. **Web page:** [check-ups-and-cleaning.html](https://virush007.github.io/poplar-dental-sparkhill/check-ups-and-cleaning.html)
+**NHS charge band:** Band 1. **Web page:** [check-ups-and-cleaning.html](https://nexumcraft.github.io/poplar-dental-sparkhill/check-ups-and-cleaning.html)
 
 A regular check-up is the simplest way to keep teeth and gums healthy, and to catch small problems before they become painful.
 
@@ -136,7 +136,7 @@ What happens at a check-up:
 
 ### Fillings
 
-**NHS charge band:** Band 2. **Web page:** [fillings.html](https://virush007.github.io/poplar-dental-sparkhill/fillings.html)
+**NHS charge band:** Band 2. **Web page:** [fillings.html](https://nexumcraft.github.io/poplar-dental-sparkhill/fillings.html)
 
 A filling repairs a tooth damaged by decay or a small break, and stops the problem getting worse.
 
@@ -160,7 +160,7 @@ Afterwards: the numbness usually wears off within a few hours, so take care not 
 
 ### Crowns and bridges
 
-**NHS charge band:** Band 3. **Web page:** [crowns-and-bridges.html](https://virush007.github.io/poplar-dental-sparkhill/crowns-and-bridges.html)
+**NHS charge band:** Band 3. **Web page:** [crowns-and-bridges.html](https://nexumcraft.github.io/poplar-dental-sparkhill/crowns-and-bridges.html)
 
 A crown protects and strengthens a damaged tooth. A bridge fills the gap left by a missing tooth.
 
@@ -180,7 +180,7 @@ Band 3 also covers any Band 1 and Band 2 care you need in the same course of tre
 
 ### Gum disease treatment
 
-**NHS charge band:** Band 1 for simple gum care, Band 2 for more extensive gum treatment. **Web page:** [gum-disease.html](https://virush007.github.io/poplar-dental-sparkhill/gum-disease.html)
+**NHS charge band:** Band 1 for simple gum care, Band 2 for more extensive gum treatment. **Web page:** [gum-disease.html](https://nexumcraft.github.io/poplar-dental-sparkhill/gum-disease.html)
 
 Gum disease is very common and often painless at first. Treated early, it can be stopped before it damages the bone that holds teeth in place.
 
@@ -203,7 +203,7 @@ Lowering your risk: brush twice a day with a fluoride toothpaste, clean between 
 
 ### Root canal treatment
 
-**NHS charge band:** Band 2 (Band 3 if a crown is fitted afterwards). **Web page:** [root-canal.html](https://virush007.github.io/poplar-dental-sparkhill/root-canal.html)
+**NHS charge band:** Band 2 (Band 3 if a crown is fitted afterwards). **Web page:** [root-canal.html](https://nexumcraft.github.io/poplar-dental-sparkhill/root-canal.html)
 
 Root canal treatment removes infection from inside a tooth, so you can keep the tooth instead of losing it.
 
@@ -227,7 +227,7 @@ Afterwards: the tooth may feel tender for a few days, and everyday painkillers u
 
 ### Tooth extractions
 
-**NHS charge band:** Band 2. Stopping bleeding after an extraction and removing stitches are free. **Web page:** [tooth-extraction.html](https://virush007.github.io/poplar-dental-sparkhill/tooth-extraction.html)
+**NHS charge band:** Band 2. Stopping bleeding after an extraction and removing stitches are free. **Web page:** [tooth-extraction.html](https://nexumcraft.github.io/poplar-dental-sparkhill/tooth-extraction.html)
 
 The practice always tries to save a tooth. When that isn't possible, it removes the tooth carefully and explains how to look after the area while it heals.
 
@@ -252,7 +252,7 @@ Call the practice if the bleeding won't stop, the pain gets worse after a few da
 
 ### Braces and orthodontics
 
-**NHS charge band:** Band 3, and free for under-18s who qualify. **Web page:** [braces.html](https://virush007.github.io/poplar-dental-sparkhill/braces.html)
+**NHS charge band:** Band 3, and free for under-18s who qualify. **Web page:** [braces.html](https://nexumcraft.github.io/poplar-dental-sparkhill/braces.html)
 
 Straighter teeth can be easier to keep clean and more comfortable to bite with. The practice checks whether braces are right for you or your child, and explains the options.
 
@@ -268,7 +268,7 @@ What happens:
 
 ## Urgent and emergency dental care
 
-**Web page:** [urgent-care.html](https://virush007.github.io/poplar-dental-sparkhill/urgent-care.html)
+**Web page:** [urgent-care.html](https://nexumcraft.github.io/poplar-dental-sparkhill/urgent-care.html)
 
 ### Go to A&E or call 999 if you have
 
@@ -340,7 +340,7 @@ Bring proof to your appointment. If you claim free treatment you aren't entitled
 
 ## The team and standards
 
-**Web page:** [team.html](https://virush007.github.io/poplar-dental-sparkhill/team.html)
+**Web page:** [team.html](https://nexumcraft.github.io/poplar-dental-sparkhill/team.html)
 
 - Poplar Dental Practice is run by Dr Atif Khalil, the practice owner and the provider registered with the Care Quality Commission.
 - The team is two dentists, three dental nurses and a practice manager. The names of the other team members haven't been published yet.
@@ -513,10 +513,10 @@ A: Only to contact you about registering and to set up your patient record. It i
 
 ## Useful links
 
-- Poplar Dental Practice website: [virush007.github.io/poplar-dental-sparkhill](https://virush007.github.io/poplar-dental-sparkhill)
-- Register as a new patient: [virush007.github.io/poplar-dental-sparkhill/new-patients.html](https://virush007.github.io/poplar-dental-sparkhill/new-patients.html)
-- Urgent dental care: [virush007.github.io/poplar-dental-sparkhill/urgent-care.html](https://virush007.github.io/poplar-dental-sparkhill/urgent-care.html)
-- Patient information (charges, complaints, privacy): [virush007.github.io/poplar-dental-sparkhill/patient-info.html](https://virush007.github.io/poplar-dental-sparkhill/patient-info.html)
+- Poplar Dental Practice website: [nexumcraft.github.io/poplar-dental-sparkhill](https://nexumcraft.github.io/poplar-dental-sparkhill)
+- Register as a new patient: [nexumcraft.github.io/poplar-dental-sparkhill/new-patients.html](https://nexumcraft.github.io/poplar-dental-sparkhill/new-patients.html)
+- Urgent dental care: [nexumcraft.github.io/poplar-dental-sparkhill/urgent-care.html](https://nexumcraft.github.io/poplar-dental-sparkhill/urgent-care.html)
+- Patient information (charges, complaints, privacy): [nexumcraft.github.io/poplar-dental-sparkhill/patient-info.html](https://nexumcraft.github.io/poplar-dental-sparkhill/patient-info.html)
 - NHS.uk profile: [nhs.uk/services/dentist/poplar-dental-practice/V004866](https://www.nhs.uk/services/dentist/poplar-dental-practice/V004866)
 - CQC profile: [cqc.org.uk/location/1-198193249](https://www.cqc.org.uk/location/1-198193249)
 - NHS 111 dental symptom checker: [111.nhs.uk/triage/check-your-dental-symptoms](https://111.nhs.uk/triage/check-your-dental-symptoms)

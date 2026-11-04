@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://virush007.github.io/poplar-dental-sparkhill/sitemap.xml

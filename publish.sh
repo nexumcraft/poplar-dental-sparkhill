@@ -1,15 +1,11 @@
 #!/usr/bin/env bash
-# Builds the site and pushes the finished files to the gh-pages branch, which GitHub Pages serves.
+# Builds the site into docs/, which GitHub Pages serves from the main branch, and pushes it.
 set -e
 cd "$(dirname "$0")"
 node build.mjs
-remote=$(git remote get-url origin)
-out=$(mktemp -d)
-cp -r site/. "$out"
-touch "$out/.nojekyll"
-cd "$out"
-git init -q -b gh-pages
+rm -rf docs
+cp -r site docs
+touch docs/.nojekyll
 git add -A
-git -c core.autocrlf=false commit -q -m "Publish site"
-git push -q -f "$remote" gh-pages
-rm -rf "$out"
+git commit -q -m "Publish site" || true
+git push -q origin main

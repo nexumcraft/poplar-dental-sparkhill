@@ -396,12 +396,29 @@ input:focus, select:focus, textarea:focus { outline: 3px solid rgba(36, 72, 61, 
 /* Chat assistant */
 .chat-launcher {
   position: fixed; right: 14px; bottom: 84px; z-index: 70;
-  display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 10px 16px;
-  border: 0; border-radius: var(--radius); background: var(--forest); color: #fff;
-  font: 700 .95rem/1 var(--font-body); cursor: pointer; box-shadow: 0 6px 18px rgba(26, 54, 45, .22);
+  display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 12px 22px 12px 18px;
+  border: 3px solid #fff; border-radius: 999px; background: var(--urgent); color: #fff;
+  font: 700 1.05rem/1 var(--font-body); cursor: pointer; box-shadow: 0 10px 28px rgba(120, 48, 22, .42);
 }
-.chat-launcher:hover { background: var(--forest-dark); }
-.chat-launcher .icon { width: 20px; height: 20px; }
+.chat-launcher:hover { background: #8F3D21; }
+.chat-launcher .icon { width: 24px; height: 24px; }
+.chat-teaser {
+  position: fixed; right: 14px; bottom: 152px; z-index: 70; width: min(270px, calc(100vw - 28px));
+  padding: 14px 40px 14px 16px; border-radius: var(--radius-lg); background: var(--paper); color: var(--ink);
+  border: 1px solid var(--line); box-shadow: 0 12px 32px rgba(36, 72, 61, .22);
+}
+.chat-teaser[hidden] { display: none; }
+.chat-teaser::after {
+  content: ""; position: absolute; right: 34px; bottom: -8px; width: 14px; height: 14px; transform: rotate(45deg);
+  background: var(--paper); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.chat-teaser__open { display: block; padding: 0; border: 0; background: none; color: inherit; font: 400 .98rem/1.4 var(--font-body); text-align: left; cursor: pointer; }
+.chat-teaser__open strong { display: block; margin-bottom: 2px; color: var(--forest); }
+.chat-teaser__close {
+  position: absolute; top: 4px; right: 4px; display: grid; place-items: center; width: 32px; height: 32px;
+  padding: 0; border: 0; border-radius: 50%; background: none; color: var(--muted); cursor: pointer;
+}
+.chat-teaser__close .icon { width: 16px; height: 16px; }
 .chat-panel {
   position: fixed; inset: 0; z-index: 80;
   display: flex; flex-direction: column; background: var(--ivory);
@@ -458,6 +475,7 @@ input:focus, select:focus, textarea:focus { outline: 3px solid rgba(36, 72, 61, 
   body { font-size: 18px; padding-bottom: 0; }
   .mobile-bar, .nav-toggle { display: none; }
   .chat-launcher { right: 24px; bottom: 24px; }
+  .chat-teaser { right: 24px; bottom: 94px; }
   .js .site-nav, .site-nav { position: static; display: flex; align-items: center; gap: 28px; padding: 0; background: none; border: 0; width: auto; }
   .site-nav ul { display: flex; gap: 4px; margin: 0; }
   .site-nav li a { border: 0; padding: 8px 10px; color: var(--ink); }
@@ -512,7 +530,16 @@ input:focus, select:focus, textarea:focus { outline: 3px solid rgba(36, 72, 61, 
   .reveal-ready .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1); transition-delay: var(--delay, 0ms); }
   .reveal-ready .reveal.is-visible { opacity: 1; transform: none; }
   [data-open="open"] .status-dot { animation: pulse 2.4s ease-out infinite; }
-  .chat-launcher { animation: rise .6s 1.2s cubic-bezier(.2, .7, .2, 1) both; }
+  /* Pops in on page load, then shakes and sends out rings until the visitor opens the chat. */
+  .chat-launcher { animation: chat-pop .7s .8s cubic-bezier(.2, .9, .3, 1.5) both, chat-shake 7s 3s ease-in-out infinite; }
+  .chat-launcher::before, .chat-launcher::after {
+    content: ""; position: absolute; inset: -3px; border-radius: inherit; border: 3px solid var(--urgent);
+    pointer-events: none; animation: chat-ring 2.4s 1.5s ease-out infinite both;
+  }
+  .chat-launcher::after { animation-delay: 2.3s; }
+  .chat-launcher:hover, .chat-launcher.is-quiet { animation: chat-pop .01s both; }
+  .chat-launcher:hover::before, .chat-launcher:hover::after, .chat-launcher.is-quiet::before, .chat-launcher.is-quiet::after { display: none; }
+  .chat-teaser:not([hidden]) { animation: chat-pop .55s cubic-bezier(.2, .9, .3, 1.4) both; transform-origin: 85% 100%; }
   .chat-panel:not([hidden]) { animation: rise .3s cubic-bezier(.2, .7, .2, 1); }
   .chat-msg { animation: rise .35s cubic-bezier(.2, .7, .2, 1); }
   .chat-typing__dots i { animation: typing 1.2s ease-in-out infinite; }
@@ -579,13 +606,19 @@ input:focus, select:focus, textarea:focus { outline: 3px solid rgba(36, 72, 61, 
   .spark { animation: twinkle 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
   .s2 { animation-delay: .8s; } .s3 { animation-delay: 1.6s; }
   .is-paused, .is-paused * { animation-play-state: paused !important; }
-  .chat-launcher .icon { animation: nudge 9s 3s ease-in-out infinite; }
   .btn:hover > .icon, .header-phone:hover .icon { animation: ring .6s ease-in-out; }
   .btn:hover { transform: translateY(-2px); }
   .aside-card, .person { transition: transform .3s cubic-bezier(.2, .7, .2, 1), box-shadow .3s; }
   .aside-card:hover, .person:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(36, 72, 61, .12); }
   .site-nav ul a { background: linear-gradient(currentColor, currentColor) 0 100% / 0 2px no-repeat; transition: background-size .25s ease; }
   .site-nav ul a:hover { background-size: 100% 2px; }
+}
+@keyframes chat-pop { from { opacity: 0; transform: scale(.3) translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes chat-ring { from { opacity: .75; transform: scale(1); } 70%, to { opacity: 0; transform: scale(1.22, 1.5); } }
+@keyframes chat-shake {
+  0%, 12%, 100% { transform: none; }
+  2% { transform: rotate(-5deg) scale(1.08); } 4% { transform: rotate(5deg) scale(1.08); }
+  6% { transform: rotate(-4deg) scale(1.08); } 8% { transform: rotate(4deg) scale(1.05); } 10% { transform: rotate(-2deg); }
 }
 @keyframes typing { 0%, 60%, 100% { transform: translateY(0); opacity: .4; } 30% { transform: translateY(-5px); opacity: 1; } }
 @keyframes float { from { transform: translateY(-10px) rotate(-8deg); } to { transform: translateY(14px) rotate(10deg); } }

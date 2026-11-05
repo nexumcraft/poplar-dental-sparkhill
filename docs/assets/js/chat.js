@@ -26,6 +26,10 @@
     <button class="chat-launcher" type="button" aria-expanded="false" aria-controls="chat-panel">
       <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span>Ask a question</span>
     </button>
+    <div class="chat-teaser" hidden>
+      <button class="chat-teaser__open" type="button"><strong>Hi, need a dentist?</strong>Ask me a question or book an appointment here.</button>
+      <button class="chat-teaser__close" type="button" aria-label="Dismiss message"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
     <section class="chat-panel" id="chat-panel" role="dialog" aria-labelledby="chat-title" hidden>
       <header class="chat-panel__header">
         <div>
@@ -204,8 +208,16 @@
   }
 
   // ---------- Open, close and input ----------
+  const teaser = root.querySelector('.chat-teaser');
+  const hideTeaser = () => { teaser.hidden = true; };
   const setOpen = (open, { focus = true } = {}) => {
     state.open = open;
+    if (open) {
+      // Once the visitor has opened the chat, the button stops asking for attention.
+      state.seen = true;
+      launcher.classList.add('is-quiet');
+      hideTeaser();
+    }
     panel.hidden = !open;
     launcher.hidden = open;
     launcher.setAttribute('aria-expanded', String(open));
@@ -216,6 +228,12 @@
   };
 
   launcher.addEventListener('click', () => setOpen(true));
+  root.querySelector('.chat-teaser__open').addEventListener('click', () => setOpen(true));
+  root.querySelector('.chat-teaser__close').addEventListener('click', () => {
+    hideTeaser();
+    state.seen = true;
+    saveState();
+  });
   root.querySelector('.chat-close').addEventListener('click', () => setOpen(false));
   panel.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') setOpen(false);
@@ -241,4 +259,9 @@
   for (const message of state.messages) addBubble(message.role, message.text);
   renderSuggestions();
   if (state.open) setOpen(true, { focus: false });
+  if (state.seen) launcher.classList.add('is-quiet');
+  else {
+    setTimeout(() => { if (!state.seen) teaser.hidden = false; }, 2500);
+    setTimeout(hideTeaser, 14000);
+  }
 })();

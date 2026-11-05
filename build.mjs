@@ -38,7 +38,11 @@ const knowledgeBase = join(root, 'knowledge-base', 'poplar-dental-knowledge-base
 if (existsSync(knowledgeBase)) cpSync(knowledgeBase, join(out, 'knowledge-base.md'));
 
 const pages = readdirSync(join(root, 'src/pages')).filter((f) => f.endsWith('.html'));
-const pageUrl = (file) => `${SITE_URL}/${file === 'index.html' ? '' : file}`;
+const pageUrl = (file) => `${SITE_URL}/${file === 'index.html' ? '' : file.replace(/\.html$/, '')}`;
+// GitHub Pages serves about.html at /about, so links leave the extension off.
+const cleanLinks = (html) => html
+  .replace(/\bhref="index\.html(#[^"]*)?"/g, 'href="./$1"')
+  .replace(/\bhref="((?![a-z]+:)[^"#]+)\.html(#[^"]*)?"/g, 'href="$1$2"');
 const indexable = [];
 
 for (const file of pages) {
@@ -52,12 +56,12 @@ for (const file of pages) {
   const canonical = SITE_URL && !meta.noindex ? `<link rel="canonical" href="${pageUrl(file)}">` : '';
   const robots = meta.noindex ? '<meta name="robots" content="noindex">' : '';
 
-  let html = layout
+  let html = cleanLinks(layout
     .replaceAll('{{title}}', () => meta.title)
     .replaceAll('{{description}}', () => meta.description)
     .replace('{{canonical}}', () => canonical)
     .replace('{{robots}}', () => robots)
-    .replace('{{content}}', () => body);
+    .replace('{{content}}', () => body));
   if (meta.nav) html = html.replaceAll(`data-nav="${meta.nav}"`, `data-nav="${meta.nav}" aria-current="page"`);
   // Pages that can be served at any URL depth (like 404) need links that start from the site root.
   if (meta.rootRelative) html = html.replace(/\b(href|src)="(?![a-z]+:|#|\/)/g, `$1="${BASE_PATH}/`);

@@ -117,7 +117,7 @@ Poplar Dental Practice provides NHS dental care for adults and children. Its NHS
 
 ### Check-ups and cleaning
 
-**NHS charge band:** Band 1. **Web page:** [check-ups-and-cleaning.html](https://nexumcraft.github.io/poplar-dental-sparkhill/check-ups-and-cleaning)
+**NHS charge band:** Band 1. **Web page:** [check-ups-and-cleaning](https://nexumcraft.github.io/poplar-dental-sparkhill/check-ups-and-cleaning)
 
 A regular check-up is the simplest way to keep teeth and gums healthy, and to catch small problems before they become painful.
 
@@ -136,7 +136,7 @@ What happens at a check-up:
 
 ### Fillings
 
-**NHS charge band:** Band 2. **Web page:** [fillings.html](https://nexumcraft.github.io/poplar-dental-sparkhill/fillings)
+**NHS charge band:** Band 2. **Web page:** [fillings](https://nexumcraft.github.io/poplar-dental-sparkhill/fillings)
 
 A filling repairs a tooth damaged by decay or a small break, and stops the problem getting worse.
 
@@ -160,7 +160,7 @@ Afterwards: the numbness usually wears off within a few hours, so take care not 
 
 ### Crowns and bridges
 
-**NHS charge band:** Band 3. **Web page:** [crowns-and-bridges.html](https://nexumcraft.github.io/poplar-dental-sparkhill/crowns-and-bridges)
+**NHS charge band:** Band 3. **Web page:** [crowns-and-bridges](https://nexumcraft.github.io/poplar-dental-sparkhill/crowns-and-bridges)
 
 A crown protects and strengthens a damaged tooth. A bridge fills the gap left by a missing tooth.
 
@@ -180,7 +180,7 @@ Band 3 also covers any Band 1 and Band 2 care you need in the same course of tre
 
 ### Gum disease treatment
 
-**NHS charge band:** Band 1 for simple gum care, Band 2 for more extensive gum treatment. **Web page:** [gum-disease.html](https://nexumcraft.github.io/poplar-dental-sparkhill/gum-disease)
+**NHS charge band:** Band 1 for simple gum care, Band 2 for more extensive gum treatment. **Web page:** [gum-disease](https://nexumcraft.github.io/poplar-dental-sparkhill/gum-disease)
 
 Gum disease is very common and often painless at first. Treated early, it can be stopped before it damages the bone that holds teeth in place.
 
@@ -203,7 +203,7 @@ Lowering your risk: brush twice a day with a fluoride toothpaste, clean between 
 
 ### Root canal treatment
 
-**NHS charge band:** Band 2 (Band 3 if a crown is fitted afterwards). **Web page:** [root-canal.html](https://nexumcraft.github.io/poplar-dental-sparkhill/root-canal)
+**NHS charge band:** Band 2 (Band 3 if a crown is fitted afterwards). **Web page:** [root-canal](https://nexumcraft.github.io/poplar-dental-sparkhill/root-canal)
 
 Root canal treatment removes infection from inside a tooth, so you can keep the tooth instead of losing it.
 
@@ -227,7 +227,7 @@ Afterwards: the tooth may feel tender for a few days, and everyday painkillers u
 
 ### Tooth extractions
 
-**NHS charge band:** Band 2. Stopping bleeding after an extraction and removing stitches are free. **Web page:** [tooth-extraction.html](https://nexumcraft.github.io/poplar-dental-sparkhill/tooth-extraction)
+**NHS charge band:** Band 2. Stopping bleeding after an extraction and removing stitches are free. **Web page:** [tooth-extraction](https://nexumcraft.github.io/poplar-dental-sparkhill/tooth-extraction)
 
 The practice always tries to save a tooth. When that isn't possible, it removes the tooth carefully and explains how to look after the area while it heals.
 
@@ -252,7 +252,7 @@ Call the practice if the bleeding won't stop, the pain gets worse after a few da
 
 ### Braces and orthodontics
 
-**NHS charge band:** Band 3, and free for under-18s who qualify. **Web page:** [braces.html](https://nexumcraft.github.io/poplar-dental-sparkhill/braces)
+**NHS charge band:** Band 3, and free for under-18s who qualify. **Web page:** [braces](https://nexumcraft.github.io/poplar-dental-sparkhill/braces)
 
 Straighter teeth can be easier to keep clean and more comfortable to bite with. The practice checks whether braces are right for you or your child, and explains the options.
 
@@ -268,7 +268,7 @@ What happens:
 
 ## Urgent and emergency dental care
 
-**Web page:** [urgent-care.html](https://nexumcraft.github.io/poplar-dental-sparkhill/urgent-care)
+**Web page:** [urgent-care](https://nexumcraft.github.io/poplar-dental-sparkhill/urgent-care)
 
 ### Go to A&E or call 999 if you have
 
@@ -340,7 +340,7 @@ Bring proof to your appointment. If you claim free treatment you aren't entitled
 
 ## The team and standards
 
-**Web page:** [team.html](https://nexumcraft.github.io/poplar-dental-sparkhill/team)
+**Web page:** [team](https://nexumcraft.github.io/poplar-dental-sparkhill/team)
 
 - Poplar Dental Practice is run by Dr Atif Khalil, the practice owner and the provider registered with the Care Quality Commission.
 - The team is two dentists, three dental nurses and a practice manager. The names of the other team members haven't been published yet.
